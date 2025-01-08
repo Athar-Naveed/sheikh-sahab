@@ -23,96 +23,81 @@ export const navbarLinks:NavLinkTypes[] = [
 ] 
 export const products = [
     {
-      title: "Moonbeam",
-      link: "https://gomoonbeam.com",
+      title: "Left Side Mirror",
       thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+        "/assets/images/hero_images/car_1.webp",
     },
     {
-      title: "Cursor",
-      link: "https://cursor.so",
+      title: "High Beam Headlight",
       thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+        "/assets/images/hero_images/car_2.webp",
     },
     {
-      title: "Rogue",
-      link: "https://userogue.com",
+      title: "Fog Light",
       thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+        "/assets/images/hero_images/car_3.webp",
     },
   
     {
-      title: "Editorially",
-      link: "https://editorially.org",
+      title: "Right Side Mirror",
       thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+        "/assets/images/hero_images/car_4.webp",
     },
     {
-      title: "Editrix AI",
-      link: "https://editrix.ai",
+      title: "Car Headlight",
       thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+        "/assets/images/hero_images/headlight_1.webp",
     },
     {
-      title: "Pixel Perfect",
-      link: "https://app.pixelperfect.quest",
+      title: "Car Reflector",
       thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+        "/assets/images/hero_images/reflector_1.webp",
     },
   
     {
-      title: "Algochurn",
-      link: "https://algochurn.com",
+      title: "Black Helmet",
       thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+        "/assets/images/hero_images/helmet_1.webp",
     },
     {
-      title: "Aceternity UI",
-      link: "https://ui.aceternity.com",
+      title: "Police Light",
       thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+        "/assets/images/hero_images/policelight_1.webp",
     },
     {
-      title: "Tailwind Master Kit",
-      link: "https://tailwindmasterkit.com",
+      title: "Scooty Side Mirror",
       thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+        "/assets/images/hero_images/scooter_1.webp",
     },
     {
-      title: "SmartBridge",
-      link: "https://smartbridgetech.com",
+      title: "Bike Backlight",
       thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+        "/assets/images/hero_images/scooter_2.webp",
     },
     {
-      title: "Renderwork Studio",
-      link: "https://renderwork.studio",
+      title: "Bike Side Mirror",
       thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+        "/assets/images/hero_images/scooter_3.webp",
     },
   
     {
-      title: "Creme Digital",
-      link: "https://cremedigital.com",
+      title: "White Striplight",
       thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+        "/assets/images/hero_images/striplight_1.webp",
     },
     {
-      title: "Golden Bells Academy",
-      link: "https://goldenbellsacademy.com",
+      title: "Red Striplight",
       thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+        "/assets/images/hero_images/striplight_2.webp",
     },
     {
-      title: "Invoker Labs",
-      link: "https://invoker.lol",
+      title: "RGB Striplight",
       thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+        "/assets/images/hero_images/striplight_3.webp",
     },
     {
-      title: "E Free Invoice",
-      link: "https://efreeinvoice.com",
+      title: "Truck Lights",
       thumbnail:
-        "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+        "/assets/images/hero_images/truck.webp",
     },
   ];
