@@ -101,3 +101,10 @@ export const products = [
         "/assets/images/hero_images/truck.webp",
     },
   ];
+
+
+  export const images = [
+    "/assets/images/emi/export.webp",
+    "/assets/images/emi/manufacture.webp",
+    "/assets/images/emi/import.webp",
+  ];
