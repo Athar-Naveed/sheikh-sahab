@@ -21,7 +21,7 @@ const EMI = () => {
         }}
         className="z-50 flex flex-col justify-center items-start"
       >
-        <motion.p className="uppercase font-bold text-xl md:text-6xl text-center text-white -mt-20 md:-mt-32">
+        <motion.p className="uppercase font-bold text-3xl md:text-6xl text-center text-white -mt-20 md:-mt-32">
           we take pride in
         </motion.p>
         

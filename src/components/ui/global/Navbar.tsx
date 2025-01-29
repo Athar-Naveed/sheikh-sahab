@@ -27,7 +27,7 @@ const Navbar = () => {
       <span className="hidden lg:flex font-poppins">Sheikh sahab</span>
   </Link>
   <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse items-center">
-      <button className="bg-black text-white mr-3 flex items-center h-10 rounded-lg text-[10px] md:text-base px-6 text-center hover:bg-slate-700">Get a Quote</button>
+      <button className="bg-black text-white mr-3 flex items-center h-10 rounded-lg text-[10px] md:text-base px-6 text-center hover:bg-transparent hover:text-black hover:border hover:border-black transition duration-150 ease-linear">Get a Quote</button>
       <div className="flex md:hidden">
       <Hamburger toggled={isOpen} toggle={setOpen} size={22} />
       </div>

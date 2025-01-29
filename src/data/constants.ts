@@ -83,25 +83,53 @@ export const products = [
     {
       title: "White Striplight",
       thumbnail:
-        "/assets/images/hero_images/striplight_1.webp",
+      "/assets/images/hero_images/striplight_1.webp",
     },
     {
       title: "Red Striplight",
       thumbnail:
-        "/assets/images/hero_images/striplight_2.webp",
+      "/assets/images/hero_images/striplight_2.webp",
     },
     {
       title: "RGB Striplight",
       thumbnail:
         "/assets/images/hero_images/striplight_3.webp",
-    },
+      },
     {
       title: "Truck Lights",
       thumbnail:
-        "/assets/images/hero_images/truck.webp",
+      "/assets/images/hero_images/truck.webp",
     },
   ];
 
+  export const categories = [
+    {
+      title: "Black Helmet",
+      category: "Helmets",
+      href:"#",
+      thumbnail: "/assets/images/hero_images/helmet_1.webp"
+    },
+    {
+      title: "Circular Headlight",
+      category: "Headlights",
+      href:"#",
+      thumbnail: "/assets/images/hero_images/car_2.webp"
+    },
+    {
+      title: "Red Striplight",
+      category: "Striplight",
+      href:"#",
+      thumbnail:
+      "/assets/images/hero_images/striplight_2.webp",
+    },
+    {
+      title: "Bike Backlight",
+      category: "Bike Lights",
+      href:"#",
+      thumbnail:
+        "/assets/images/hero_images/scooter_2.webp",
+    },
+  ]
 
   export const images = [
     "/assets/images/emi/export.webp",
