@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Carousel,Card } from "./ui/carousel";
+import { Carousel, Card } from "./ui/carousel";
 import { categories } from "@/data/constants";
 
 export function SCarousel() {
@@ -11,7 +11,7 @@ export function SCarousel() {
 
   return (
     <div className="w-full h-full py-20">
-      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+      <h2 className="max-w-7xl pl-4 mx-auto text-3xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
         Categories
       </h2>
       <Carousel items={cards} />

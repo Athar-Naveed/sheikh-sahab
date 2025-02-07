@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Sheikh Sahab | Sheikhs",
   description: "",
-  icons: "favicon.ico"
+  icons: "favicon.ico",
 };
 
 export default function RootLayout({
