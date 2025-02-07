@@ -53,18 +53,21 @@ const Footer = () => {
                   </p>
 
                   <ul className="mt-8 space-y-4 text-sm">
-                    {footLink.sublist.map((subListMap, index) => (
-                      <Link
-                        key={index}
-                        className={`transition ${
-                          footLink.title == "Support"
-                            ? "text-gray-500"
-                            : "text-white hover:text-white/75"
-                        } cursor-none leading-8`}
-                        href={subListMap.href}
-                      >
-                        <li>{subListMap.title}</li>
-                      </Link>
+                    {footLink.sublist.map((subListMap, subIndex) => (
+                      <li key={subIndex}>
+                        {footLink.title === "Support" ? (
+                          <span className="text-gray-500 cursor-text select-text">
+                            {subListMap.title}
+                          </span>
+                        ) : (
+                          <Link
+                            className="text-white hover:text-white/75 transition"
+                            href={subListMap.href}
+                          >
+                            {subListMap.title}
+                          </Link>
+                        )}
+                      </li>
                     ))}
                   </ul>
                 </div>
