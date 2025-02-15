@@ -55,7 +55,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] mb-5"
+      className="h-[300vh] pt-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -106,7 +106,9 @@ export const Header = () => {
         Hub of new &<br /> innovative products
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-      Our motive is to bring innovative technological solutions that not only solve people&apos;s problems but also ensure a better and greener future.
+        Our motive is to bring innovative technological solutions that not only
+        solve people&apos;s problems but also ensure a better and greener
+        future.
       </p>
     </div>
   );
@@ -133,13 +135,13 @@ export const ProductCard = ({
       key={product.title}
       className="group/product h-96 w-[30rem] relative flex-shrink-0"
     >
-        <Image
-          src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
-          alt={product.title}
-        />
+      <Image
+        src={product.thumbnail}
+        height="600"
+        width="600"
+        className="object-cover object-left-top absolute h-full w-full inset-0"
+        alt={product.title}
+      />
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
         {product.title}

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Carousel, Card } from "./ui/carousel";
+
 import { categories } from "@/data/constants";
 
 export function SCarousel() {

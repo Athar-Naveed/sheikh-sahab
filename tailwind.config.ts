@@ -1,14 +1,15 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 import tailwindcssAnimate from "tailwindcss-animate";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+    "*.{js,ts,jsx,tsx,mdx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -21,7 +22,7 @@ const config = {
     extend: {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-        roboto: ["Roboto","sans-serif"]
+        roboto: ["Roboto", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -72,14 +73,24 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        flowDown: {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100%)" },
+        },
+        flowRight: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "flow-down": "flowDown 3s linear infinite",
+        "flow-right": "flowRight 3s linear infinite",
       },
     },
   },
   plugins: [tailwindcssAnimate],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

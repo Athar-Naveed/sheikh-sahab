@@ -1,9 +1,11 @@
 "use client";
 
+import { useRef } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Mail } from "lucide-react";
 import { useState } from "react";
+import { motion, useInView } from "framer-motion";
 
 // Validation Schema
 const validationSchema = Yup.object({
@@ -21,6 +23,14 @@ export default function NewsletterForm() {
     success?: boolean;
     message?: string;
   }>({});
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+  const fadeInLeftVariants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0 },
+  };
 
   const handleSubmit = async (
     values: { firstName: string; email: string },
@@ -50,18 +60,33 @@ export default function NewsletterForm() {
   };
 
   return (
-    <div className="min-h-[400px] md:min-h-[800px] bg-black flex flex-col items-center justify-center px-4 py-16">
+    <motion.div
+      ref={ref}
+      className="min-h-[400px] md:min-h-[800px] bg-gray-900 flex flex-col items-center justify-center px-4 py-16"
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={fadeInLeftVariants}
+      transition={{ duration: 0.5 }}
+    >
       {/* Icon Container */}
-      <div className="mb-8 relative">
-        <div className="w-16 h-16 rounded-full bg-[#1a1a1a] flex items-center justify-center">
+      <motion.div
+        className="mb-8 relative"
+        variants={fadeInLeftVariants}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <div className="w-16 h-16 rounded-full bg-transparent border border-slate-500 flex items-center justify-center">
           <Mail className="w-8 h-8 text-white" />
         </div>
-      </div>
+      </motion.div>
 
       {/* Heading */}
-      <h2 className="text-white text-3xl md:text-4xl font-medium text-center max-w-2xl mb-12">
+      <motion.h2
+        className="text-white text-3xl md:text-4xl font-medium text-center max-w-2xl mb-12"
+        variants={fadeInLeftVariants}
+        transition={{ duration: 0.5, delay: 0.3 }}
+      >
         Receive the latest updates about our offers in your inbox.
-      </h2>
+      </motion.h2>
 
       {/* Form */}
       <Formik
@@ -71,7 +96,11 @@ export default function NewsletterForm() {
       >
         {({ isSubmitting, touched, errors }) => (
           <Form className="w-full max-w-2xl space-y-4">
-            <div className="flex flex-col md:flex-row gap-4">
+            <motion.div
+              className="flex flex-col md:flex-row gap-4"
+              variants={fadeInLeftVariants}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
               <div className="flex-1">
                 <Field
                   type="text"
@@ -107,9 +136,13 @@ export default function NewsletterForm() {
                   className="text-red-500 text-sm mt-1"
                 />
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex flex-col items-center gap-4 mt-6">
+            <motion.div
+              className="flex flex-col items-center gap-4 mt-6"
+              variants={fadeInLeftVariants}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
               <button
                 type="submit"
                 disabled={isSubmitting}
@@ -128,15 +161,19 @@ export default function NewsletterForm() {
                   {submitStatus.message}
                 </div>
               )}
-            </div>
+            </motion.div>
           </Form>
         )}
       </Formik>
 
       {/* Footer Text */}
-      <p className="text-gray-300 text-center text-sm mt-6">
+      <motion.p
+        className="text-gray-300 text-center text-sm mt-6"
+        variants={fadeInLeftVariants}
+        transition={{ duration: 0.5, delay: 0.6 }}
+      >
         Get the latest content in your inbox every week. We don&apos;t spam.
-      </p>
-    </div>
+      </motion.p>
+    </motion.div>
   );
 }

@@ -60,6 +60,9 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   * {
     @apply border-border;
   }
@@ -68,5 +71,14 @@
   }
   .landing {
     @apply min-w-[320px] max-w-[1440px] mx-auto mt-20;
+  }
+  .emi-title {
+    @apply text-2xl md:text-4xl text-black mb-2 font-bold font-poppins;
+  }
+  .emi-heading {
+    @apply md:text-xl text-slate-500 mb-2 font-semibold font-poppins;
+  }
+  .emi-desc {
+    @apply text-base md:text-lg text-slate-500 mb-2 font-medium font-poppins;
   }
 }

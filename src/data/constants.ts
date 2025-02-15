@@ -87,6 +87,24 @@ export const products = [
   },
 ];
 
+export const services = [
+  {
+    title: "Export",
+    description: "Export",
+    src: "/assets/images/emi/export.webp",
+  },
+  {
+    title: "Manufacture",
+    description: "Manufacture",
+    src: "/assets/images/emi/manufacture.webp",
+  },
+  {
+    title: "Import",
+    description: "Import",
+    src: "/assets/images/emi/import.webp",
+  },
+];
+
 export const categories = [
   {
     title: "Black Helmet",
@@ -168,11 +186,7 @@ export const footerLinks = [
     title: "Support",
     sublist: [
       {
-        title: "+92 331 4264046",
-        href: "#",
-      },
-      {
-        title: "info2sheikhsahab@gmail.com",
+        title: "info@sheikhs.com",
         href: "#",
       },
       {
@@ -191,7 +205,7 @@ export const socials = [
   },
   {
     title: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/_sheikh_sahab_official",
     icon: "/assets/socials/instagram.svg",
   },
   {
@@ -201,7 +215,7 @@ export const socials = [
   },
   {
     title: "LinkedIn",
-    href: "#",
+    href: "https://www.linkedin.com/company/sheikh-sahab",
     icon: "/assets/socials/linkedin.svg",
   },
 ];
