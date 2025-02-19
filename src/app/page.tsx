@@ -2,7 +2,8 @@ import { SCarousel } from "@/components/Carousel";
 import EMI from "@/components/ui/EMI";
 
 import Hero from "@/components/ui/Hero";
-import Newsletter from "@/components/ui/Newsletter";
+import QuoteForm from "@/components/ui/Quote";
+
 import RecycleFacility from "@/components/ui/Recycle";
 
 export default function Landing() {
@@ -13,7 +14,7 @@ export default function Landing() {
         <EMI />
         <SCarousel />
         <RecycleFacility />
-        <Newsletter />
+        <QuoteForm />
       </section>
     </>
   );

@@ -16,9 +16,15 @@ const validationSchema = Yup.object({
   email: Yup.string()
     .email("Invalid email address")
     .required("Email is required"),
+  subject: Yup.string()
+    .min(2, "Subject must be at least 2 characters")
+    .required("Subject is required"),
+  details: Yup.string()
+    .min(50, "Detail must be at least 50 characters")
+    .required("Detail is required"),
 });
 
-export default function NewsletterForm() {
+export default function QuoteForm() {
   const [submitStatus, setSubmitStatus] = useState<{
     success?: boolean;
     message?: string;
@@ -33,7 +39,12 @@ export default function NewsletterForm() {
   };
 
   const handleSubmit = async (
-    values: { firstName: string; email: string },
+    values: {
+      firstName: string;
+      email: string;
+      subject: string;
+      details: string;
+    },
     {
       resetForm,
       setSubmitting,
@@ -46,7 +57,8 @@ export default function NewsletterForm() {
 
       setSubmitStatus({
         success: true,
-        message: "Thank you for subscribing!",
+        message:
+          "We have received your query, and will get back to you shortly!",
       });
       resetForm();
     } catch (error) {
@@ -61,6 +73,7 @@ export default function NewsletterForm() {
 
   return (
     <motion.div
+      id="quote"
       ref={ref}
       className="min-h-[400px] md:min-h-[800px] bg-gray-900 flex flex-col items-center justify-center px-4 py-16"
       initial="hidden"
@@ -81,16 +94,20 @@ export default function NewsletterForm() {
 
       {/* Heading */}
       <motion.h2
-        className="text-white text-3xl md:text-4xl font-medium text-center max-w-2xl mb-12"
+        className="text-white text-3xl md:text-4xl font-medium text-center max-w-2xl mb-5"
         variants={fadeInLeftVariants}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
-        Receive the latest updates about our offers in your inbox.
+        Want to get a Quote! Contact
       </motion.h2>
+      <motion.p className="text-slate-200 text-sm font-medium text-center max-w-2xl mb-12">
+        Explore how our services can benefit your business. Our team will
+        provide a detailed proposal.
+      </motion.p>
 
       {/* Form */}
       <Formik
-        initialValues={{ firstName: "", email: "" }}
+        initialValues={{ firstName: "", email: "", subject: "", details: "" }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
@@ -137,6 +154,48 @@ export default function NewsletterForm() {
                 />
               </div>
             </motion.div>
+            <motion.div
+              variants={fadeInLeftVariants}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="grid"
+            >
+              <div className="flex-1 my-5">
+                <Field
+                  type="text"
+                  name="subject"
+                  placeholder="Subject here..."
+                  className={`w-full bg-transparent border ${
+                    touched.subject && errors.subject
+                      ? "border-red-500"
+                      : "border-gray-700"
+                  } rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-[#4a5af5] transition-colors`}
+                />
+                <ErrorMessage
+                  name="subject"
+                  component="div"
+                  className="text-red-500 text-sm mt-1"
+                />
+              </div>
+
+              <div className="flex-1">
+                <Field
+                  as={"textarea"}
+                  rows={4}
+                  name="details"
+                  placeholder="Detail here..."
+                  className={`w-full bg-transparent border resize-none ${
+                    touched.details && errors.details
+                      ? "border-red-500"
+                      : "border-gray-700"
+                  } rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-[#4a5af5] transition-colors`}
+                />
+                <ErrorMessage
+                  name="details"
+                  component="div"
+                  className="text-red-500 text-sm mt-1"
+                />
+              </div>
+            </motion.div>
 
             <motion.div
               className="flex flex-col items-center gap-4 mt-6"
@@ -148,7 +207,7 @@ export default function NewsletterForm() {
                 disabled={isSubmitting}
                 className="bg-white text-black px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? "Subscribing..." : "Subscribe Now"}
+                {isSubmitting ? "Sending..." : "Get a Quote"}
               </button>
 
               {/* Status Message */}
@@ -172,7 +231,7 @@ export default function NewsletterForm() {
         variants={fadeInLeftVariants}
         transition={{ duration: 0.5, delay: 0.6 }}
       >
-        Get the latest content in your inbox every week. We don&apos;t spam.
+        Don't worry if you are just confused. We are here to help you.
       </motion.p>
     </motion.div>
   );
